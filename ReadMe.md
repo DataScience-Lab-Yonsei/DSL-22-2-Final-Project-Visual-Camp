@@ -1,14 +1,20 @@
-# Title
+# Title: SmartVC
 
-DSL X Visual Camp
+[2022-2학기 DSL X Visual Camp 기업연계 프로젝트] 시선데이터 기반 읽기 능력 평가 서비스 개선
 
-# Data
+팀원 강민주 김원 유채원 이승주 조보경 최명헌 황진우 전혜령 김예진
+
+# Notice
 
 Some codes and data are not available because of the policy of company.
 
-# Title
+# Overview
 
-SmartVC
+## Motivation 
+![사진](/figure/1.PNG)
+
+## Problem Definition
+![사진](/figure/2.PNG)
 
 # How to run
 
@@ -23,12 +29,13 @@ There are some arguments to be changed.
 - corrected_line_x(y) = True : Run line allocation algorithm with correction(our suggestion). If you allocate False, then line allocation is based on Nearest Neighbor Algorithm. Or, you can run with our suggestions.
 - log_all = True: When you run SmartVC, you can easily debug current status.
 
-# Data Structure
+# Details
+## Data Structure
 
 We wrap raw data with Python object. class Visc has several member variables, from Raw Fixation to WordAoi.\\
-You can see more details in utils/data.py
+You cannot see more details because of the policy.
 
-# Primary Modules
+## Primary Modules
 
 - data_handler.py
 
@@ -38,26 +45,6 @@ This is for DataHandler of our data. You can see more details regarding data pro
 
 This is compose of several function to run iVT Filter. We can tell the process of iVT Filter in the function named "run".
 
+# Sample
 
-
-# version log
-
-## ver.1.1
-
-1. data.py
-    - 새로 업데이트된 데이터에 대해 추가된 것들은 다음과 같습니다.
-        - 현재 raw 데이터에 있지만 iVT, LineAllo에 무관했던 데이터들 중에서, 추후 metric에 필요해 보이는 데이터를 활성화했습니다
-        - wordAoi는 우선 데이터가 다 존재한다고 가정해서 업데이트했습니다.
-        - BoundaryPoint는 새로 추가된 데이터로, calibration 에 관련된 정보를 담고 있습니다.
-2. data_handler.py
-    - 새로 업데이트 된 데이터에 맞춰 로드하는 루틴을 바꿨습니다.
-        - 현재 있는 데이터로 로드가 전부 진행됩니다.
-        - 컴퓨터에서 오래 걸리는 경우, 일부 sample만 뽑아서 보실 경우, 다음과 같이 진행하시면 됩니다.
-            - hander를 initialization을 하는 경우 is_sample=True로 추가하시고, sample_id=원하시는 숫자. 로 하시면 됩니다.
-            - 간혹 sample_id가 전체 개수보다 넘은 경우 가장 마지막 sample을 사용하도록 합니다.
-3. visual.py
-    - 기존 돌아가는 방식과 동일하게 진행됩니다.
-    - 다만 순서대로 어떻게 점이 찍히는지 확인하실 분들은 다음과 같이 진행하시면 됩니다.
-        - 찍고 싶으신 점들로 plot_points()를 실행하실 줄에서 is_save=True, fig=fig를 추가하시면 됩니다.
-
-
+![사진](/figure/3.PNG)
