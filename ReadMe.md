@@ -1,4 +1,4 @@
-# Title: SmartVC
+# SmartVC
 
 [2022-2학기 DSL X Visual Camp 기업연계 프로젝트] 시선데이터 기반 읽기 능력 평가 서비스 개선
 
